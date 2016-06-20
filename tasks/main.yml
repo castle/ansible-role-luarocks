@@ -13,5 +13,5 @@
     - "{{ luarocks_packages }}"
     - "{{ luarocks_group_packages }}"
     - "{{ luarocks_host_packages }}"
-  when: '{{ item }}' not in rocks.stdout
+  when: "'{{ item }}' not in rocks.stdout"
   tags: [luarocks]
