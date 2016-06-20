@@ -1,0 +1,17 @@
+---
+
+# Main tasks file for luarocks role
+
+- name: Gather installd lua rocks
+  shell: luarocks list
+  register: rocks
+  tags: [luarocks]
+
+- name: Install lua rocks
+  shell: luarocks install {{ item }}
+  with_flattened:
+    - "{{ luarocks_packages }}"
+    - "{{ luarocks_group_packages }}"
+    - "{{ luarocks_host_packages }}"
+  when: '{{ item }}' not in rocks.stdout
+  tags: [luarocks]

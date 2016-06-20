@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  vars:
+    - luarocks_packages:
+      - inifile
+      - lua-cjson
+
+  roles:
+    - ansible-role-luarocks
