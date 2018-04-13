@@ -6,6 +6,7 @@
   shell: luarocks list
   register: rocks
   tags: [luarocks]
+  changed_when: no
 
 - name: Install lua rocks
   shell: luarocks install {{ item }}
