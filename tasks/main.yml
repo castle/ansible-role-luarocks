@@ -9,7 +9,7 @@
   changed_when: no
 
 - name: Install lua rocks
-  shell: luarocks install {{ item }}
+  shell: "luarocks install {{ item }}"
   with_flattened:
     - "{{ luarocks_packages }}"
     - "{{ luarocks_group_packages }}"
