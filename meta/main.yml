@@ -6,11 +6,12 @@ galaxy_info:
   company: ALG
   license: "license (BSD, MIT)"
   min_ansible_version: 2.1
+  version: 1.0
   github_branch: master
   platforms:
-    - name: Debian
+    - name: Ubuntu
       versions:
-        - jessie
+        - xenial
   galaxy_tags:
     - system
 
