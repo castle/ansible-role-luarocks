@@ -3,6 +3,7 @@
   shell: luarocks list
   register: rocks
   changed_when: no
+  check_mode: no
 
 - name: Install lua rocks
   shell: "luarocks install {{ item }}"
